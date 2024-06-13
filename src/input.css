@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --big-stone: #123;
+    --beige: #f5f5dc;
+    --black: #000;
+    --brown-derby: #492615;
+    --concrete: #f2f2f2;
+    --chathams-blue: #147;
+    --dove-grey: #666;
+    --emperor: #555;
+    --mine-shaft: #333;
+    --silver: #ccc;
+    --tundora: #404040;
+    --white: #fff;
+  
+    --light-bg-primary-colour: light-dark(var(--mine-shaft), var(--white));
+    --light-bg-secondary-colour: light-dark(var(--dove-grey), var(--concrete));
+    --light-bg-primary-background: light-dark(var(--white), var(--black));
+    --light-bg-secondary-background: light-dark(
+      var(--concrete),
+      var(--mine-shaft)
+    );
+    --light-bg-primary-border: light-dark(var(--silver), var(--dove-grey));
+  
+    --dark-bg-primary-colour: var(--white);
+    --dark-bg-primary-background: var(--black);
+    --dark-bg-secondary-background: var(--mine-shaft);
+    --dark-bg-tertiary-background: var(--tundora);
+    --dark-bg-quaternary-background: var(--emperor);
+  
+    --fixed-colour: light-dark(var(--white), var(--white));
+  
+    --beige-bg-background: light-dark(var(--beige), var(--brown-derby));
+  
+    --chathams-blue-bg-background: light-dark(
+      var(--chathams-blue),
+      var(--chathams-blue)
+    );
+  
+    /* Reference: https://daverupert.com/2024/05/light-dark-experiment */
+    @supports (color: light-dark(black, white)) {
+      color-scheme: light dark;
+    }
+  }
+  
