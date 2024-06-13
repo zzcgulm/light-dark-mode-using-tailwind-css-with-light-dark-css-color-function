@@ -21,7 +21,6 @@ module.exports = {
 
       lightBgPrimaryColour: "var(--light-bg-primary-colour)",
       lightBgSecondaryColour: "var(--light-bg-secondary-colour)",
-      lightBgSecondaryColour: "var(--light-bg-secondary-colour)",
       lightBgPrimaryBackground: "var(--light-bg-primary-background)",
       lightBgSecondaryBackground: "var(--light-bg-secondary-background)",
       lightBgPrimaryBorder: "var(--light-bg-primary-border)",

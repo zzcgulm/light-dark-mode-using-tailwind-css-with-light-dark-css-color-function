@@ -214,6 +214,10 @@
   line-height: 1.5rem;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .text-darkBgPrimaryColour {
   color: var(--white);
 }
