@@ -1,13 +1,73 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Light/dark mode using light-dark() respecting users' settings</title>
-    <link href="./output.css" rel="stylesheet" />
-  </head>
-  <!-- Add background colour to `<body>` so that `<footer>` background colour extends to bottom of viewport when page content is shorter than the viewport. -->
-  <body class="m-[unset] text-white bg-mineShaft">
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Light/dark mode using light-dark() respecting users' settings</title>
+  <link href="./output.css" rel="stylesheet" />
+</head>
+<!-- Add background colour to `<body>` so that `<footer>` background colour extends to bottom of viewport when page content is shorter than the viewport. -->
+
+<body class="m-[unset] text-white bg-mineShaft">
+  <header
+    class="px-[32px] py-4 text-base text-lightBgSecondaryColour bg-lightBgPrimaryBackground border-lightBgPrimaryBorder border-solid border-t-0 border-x-0 border-b">
+    Header
+  </header>
+  <!-- If we add the primary background colour to `<main>` then we can handle non-collapsing whitespace better? -->
+  <main class="text-lightBgSecondaryColour bg-lightBgPrimaryBackground">
+    <div class="px-[32px] py-4 text-lightBgSecondaryColour bg-lightBgPrimaryBackground">
+      <h1 class="my-[unset] text-3xl">Light/dark mode using <code>light-dark()</code> CSS <code><color></code> function
+        respecting users' settings</h1>
+    </div>
+    <div class="px-[32px] py-4 text-lightBgPrimaryColour bg-lightBgPrimaryBackground">
+      <h2 class="my-[unset] text-2xl">Content block primary background</h2>
+    </div>
+    <div class="px-[32px] py-4 text-lightBgPrimaryColour bg-lightBgPrimaryBackground">
+      <p class="mb-4 text-base">
+        Second Content block primary background, illustrating what happens
+        when whitespace does not collapse on adjacent components with the same
+        background colour, ie the whitespace is larger then it should be.
+      </p>
+      <p class="my-4 text-base">
+        Second paragraph in second Content block primary background,
+        illustrating what happens when margins collapse in the same component.
+      </p>
+      <p class="mt-4 text-base">
+        Third paragraph in second Content block primary background,
+        illustrating what happens when margins collapse in the same component.
+      </p>
+    </div>
+    <div class="px-[32px] py-4 text-lightBgSecondaryColour bg-lightBgSecondaryBackground">
+      <h2 class="my-[unset] text-2xl">Content block secondary background</h2>
+    </div>
+    <div class="px-[32px] py-4 text-lightBgPrimaryColour bg-beigeBgBackground">
+      <div>
+        <h2 class="my-[unset] text-2xl">
+          Boxed content <em>Beige</em> background (changes to <em>Big stone</em> in dark mode)
+        </h2>
+      </div>
+    </div>
+    <div class="px-[32px] py-4 text-darkBgPrimaryColour bg-chathamsBlue">
+      <div>
+        <h2 class="my-[unset] text-2xl">
+          Boxed content <em>Chathams Blue</em> background (same in light and
+          dark mode)
+        </h2>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <div class="px-[32px] py-4 text-darkBgPrimaryColour bg-darkBgQuaternaryBackground">
+      <p class="my-[unset] text-base">Footer 1</p>
+    </div>
+    <div class="px-[32px] py-4 text-darkBgPrimaryColour bg-darkBgTertiaryBackground">
+      <p class="my-[unset] text-base">Footer 2</p>
+    </div>
+    <div class="px-[32px] py-4 text-darkBgPrimaryColour bg-darkBgSecondaryBackground">
+      <p class="my-[unset] text-base">Footer 3</p>
+    </div>
+  </footer>
+</body>
+
 </html>
